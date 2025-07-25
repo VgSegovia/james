@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>James Gamayot- Profile</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            color: white;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Fullscreen video background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+            opacity: 0.7; /* Slightly transparent */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            position: relative;
+            z-index: 1;
+        }
+
+        .profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #FF6B6B;
+            margin-bottom: 2rem;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .info-bubbles {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            max-width: 800px;
+            width: 100%;
+            padding: 1rem;
+        }
+
+        .bubble {
+            background: rgba(211, 168, 12, 0.7);
+            border-radius: 15px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease;
+            opacity: 5;
+        }
+
+        .bubble:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            color: black;
+        }
+
+        .side-image {
+            position: absolute;
+            top: 0;
+            width: 200px; /* Adjust width as needed */
+            height: auto;
+            z-index: 05; 
+        }
+        .right-image {
+            right: 0;
+        }
+        h4{
+            text-align: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            color: black;
+        }
+    </style>
+</head>
+<body> 
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="halu.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="container">
+        <img src="james.jpg" alt="Profile Picture" class="profile-picture">
+        <h1>James Moraña Gamayot</h1>
+        <h4>INFO</h4>
+        
+        <div class="info-bubbles">
+            <div class="bubble">✅ ADDRESS: Brgy. San Jose, Maasin City, Southern Leyte, Philippines</div>
+            <div class="bubble">✅ HOBBIES: Online gaming, volleyball, traveling</div>
+            <div class="bubble">✅ INTERESTS: Cooking, travelling amazing places</div>
+            <div class="bubble">✅ SHORT-TERM GOALS:  to explore and learned a lot in It fields. </div>
+            <div class="bubble">✅ LONG-TERM GOALS: Achieve financial stability; contribute significantly to family well-being; advance in my IT career.</div>
+            <div class="bubble">✅ PERSONAL MOTTO: "Hard work and dedication pave the way to success."</div>
+        </div>
+
+    </div>
+</body>
+</html
